@@ -1,0 +1,3 @@
+[submodule "submodules/open-huninn-font"]
+	path = submodules/open-huninn-font
+	url = https://github.com/marsnow/open-huninn-web-font
