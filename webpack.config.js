@@ -18,8 +18,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,                // 處理 CSS 文件
-                use: ['style-loader', 'css-loader']
+                test: /\.scss$/, // 處理 SASS 文件
+                use: ['style-loader', 'css-loader', , 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif|svg)$/, // 處理圖片文件的規則
