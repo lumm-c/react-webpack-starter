@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     entry: path.join(__dirname, 'src/index.js'),
@@ -15,6 +16,10 @@ module.exports = {
                 use: {
                     loader: 'babel-loader'
                 }
+            },
+            {
+                test: /\.css$/,                // 處理 CSS 文件
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(png|jpg|gif|svg)$/, // 處理圖片文件的規則
@@ -33,7 +38,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: './public/index.html' })
+        new HtmlWebpackPlugin({ template: './public/index.html' }),
     ],
     resolve: {
         alias: {

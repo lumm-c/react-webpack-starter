@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Open Huninn';
+    src: url('@/assets/fonts/open-huninn-font/jf-openhuninn.woff2') format('woff2'),
+        url('@/assets/fonts/open-huninn-font/jf-openhuninn.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.appContainer {
+    font-family: 'Open Huninn';
+    text-align: center;
+}
+
+.img {
+    width: 150px;
+    height: 150px;
+}
