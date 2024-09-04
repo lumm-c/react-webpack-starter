@@ -4,10 +4,28 @@ This repository serves as a starter template for building React applications wit
 
 ## Features
 
-- **React**: A JavaScript library for building user interfaces.
-- **Webpack**: Module bundler to manage and bundle your assets.
-- **Babel**: Transpiles modern JavaScript (ES6+) and JSX syntax to ensure compatibility across browsers.
-- **Hot Module Replacement**: Automatically refreshes the application in the browser during development.
+- 🌓 **Dark/Light Theme Switching**: Toggle between light and dark modes.
+- 🌐 **Multi-Language Support**: Easily switch between English and Chinese.
+- 🔄 **Dynamic Updates**: Instant changes for both theme and language settings.
+
+## Project Structure
+
+```bash
+react-webpack-starter/
+├── public/                 # Static files
+├── src/                    # React source code
+│   ├── assets/             # Assets (images, fonts, etc.)
+│   ├── components/         # React components
+│   ├── App.js              # Main application component
+│   ├── i18n.js             # Language configuration
+├── docs/                   # Documentation resources
+│   ├── assets/             # Images for README and documentation
+│   │   └── readme/         # README images
+│   │       └── image.png   # Example image
+├── README.md               # Project documentation
+├── package.json            # Project configuration
+└── webpack.config.js       # Webpack configuration
+```
 
 ## Getting Started
 
@@ -26,6 +44,8 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
 2. Install dependencies:
    ```bash
    npm install
+   git submodule update --init --recursive
+   npm run link-fonts
    ```
 3. Running the Development Server
    ```bash
@@ -35,3 +55,15 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
    ```bash
    npm build
    ```
+
+### Usage
+
+Once the application is running, open http://localhost:3000 in your browser and you can:
+
+Switch between Light Mode and Dark Mode by clicking the toggle button.
+Change the language between English and 中文 by using the language switch button.
+
+### Screenshots
+
+Here is an example of how the application looks:
+![description](docs/day04.git)
