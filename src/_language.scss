@@ -1,0 +1,21 @@
+$font-family-zh: 'Open Huninn', sans-serif;
+$font-family-en: 'Comic Sans MS', fantasy;
+
+@mixin setLanguageFont($lang) {
+    @if $lang =='zh' {
+        font-family: $font-family-zh;
+    }
+
+    @else {
+        font-family: $font-family-en;
+    }
+}
+
+// 應用到語言類別的 Mixin
+.zh {
+    @include setLanguageFont('zh');
+}
+
+.en {
+    @include setLanguageFont('en');
+}
