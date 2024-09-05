@@ -16,12 +16,12 @@ react-webpack-starter/
 ├── src/                    # React source code
 │   ├── assets/             # Assets (images, fonts, etc.)
 │   ├── components/         # React components
+│   ├── pages/              # Page-level components
+│   ├── styles/             # Global styles
+│   ├── utils/              # Utility functions and helpers
+│   │   └── i18n.js         # Language configuration
 │   ├── App.js              # Main application component
-│   ├── i18n.js             # Language configuration
-├── docs/                   # Documentation resources
-│   ├── assets/             # Images for README and documentation
-│   │   └── readme/         # README images
-│   │       └── image.png   # Example image
+├── docs/                   # Images for README and documentation
 ├── README.md               # Project documentation
 ├── package.json            # Project configuration
 └── webpack.config.js       # Webpack configuration
@@ -60,10 +60,16 @@ Ensure you have [Node.js](https://nodejs.org/) installed.
 
 Once the application is running, open http://localhost:3000 in your browser and you can:
 
-Switch between Light Mode and Dark Mode by clicking the toggle button.
-Change the language between English and 中文 by using the language switch button.
+- Switch between Light Mode and Dark Mode by clicking the toggle button.
+- Switch between English and Chinese by clicking the toggle button.
 
 ### Screenshots
 
 Here is an example of how the application looks:
-![description](docs/day04.git)
+![description](docs/day05.gif)
+
+
+### Contribution
+
+Contributions are welcome! Feel free to open issues or submit pull requests if you have any suggestions or improvements.
+

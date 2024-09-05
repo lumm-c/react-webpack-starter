@@ -1,0 +1,12 @@
+@import '@/styles/button';
+@import '@/styles/theme';
+
+.light_theme_btn {
+    margin: 10px;
+    @include button-styles($button-primary-background, $button-primary-text)
+}
+
+.dark_theme_btn {
+    margin: 10px;
+    @include button-styles($button-dark-primary-background, $button-dark-primary-text);
+}

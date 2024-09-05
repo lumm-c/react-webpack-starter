@@ -1,7 +1,6 @@
 /* App.module.scss */
-
-@import './theme';
-@import './_language.scss';
+@import '@/styles/theme';
+@import '@/styles/language';
 
 /* 全局樣式 */
 html,
@@ -33,34 +32,12 @@ body {
     transition: background-color 0.3s, color 0.3s;
 
     &.lightMode {
-        background-color: $light-mode-bg;
-        color: $light-mode-text;
+        background-color: $background-color-primary;
+        color: $text-color-primary;
     }
 
     &.darkMode {
-        background-color: $dark-mode-bg;
-        color: $dark-mode-text;
+        background-color: $background-color-dark-primary;
+        color: $text-color-dark-primary;
     }
-
-
-}
-
-.img {
-    width: 150px;
-    height: 150px;
-}
-
-.btn {
-    margin: 10px;
-    /* 增加按鈕之間的間距 */
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f5f5f5;
-}
-
-.btn:hover {
-    background-color: #ddd;
 }
