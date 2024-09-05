@@ -66,8 +66,7 @@ Once the application is running, open http://localhost:3000 in your browser and 
 ### Screenshots
 
 Here is an example of how the application looks:
-![description](./docs/day06.gif)
-
+![github](./docs/Day06.gif)
 
 ### Contribution
 
