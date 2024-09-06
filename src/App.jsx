@@ -4,6 +4,7 @@ import i18n from '@/utils/i18n';
 import ThemeButton from '@/components/ThemeButton';
 import LangButton from '@/components/LangButton';
 import Logo from '@/components/Logo';
+import Version from './components/Version';
 import { useTheme } from '@/utils/ThemeContext';
 import * as styles from "@/APP.module.scss";
 import '@/styles/_language.scss';
@@ -12,7 +13,11 @@ const App = () => {
 
     // 使用 useTranslation 取得翻譯函數 t
     const { t } = useTranslation();
-    const { isDarkMode, toggleTheme } = useTheme();
+    const { isDarkMode } = useTheme();
+
+    if (process.env.NODE_ENV !== 'production') {
+        console.log('App rendered');
+    }
 
     return (
         <div className={`${styles.appContainer}
@@ -25,6 +30,7 @@ const App = () => {
             <div>
                 <ThemeButton />
                 <LangButton />
+                <Version />
             </div>
         </div >
     );

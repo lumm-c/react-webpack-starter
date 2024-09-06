@@ -11,6 +11,10 @@ const LangButton = ({ }) => {
     }
     const { isDarkMode } = useTheme();
 
+    if (process.env.NODE_ENV !== 'production') {
+        console.log('LangButton rendered');
+    }
+
     return (
         <button
             className={isDarkMode ? styles.dark_lang_btn : styles.light_lang_btn}
@@ -20,4 +24,4 @@ const LangButton = ({ }) => {
     )
 }
 
-export default LangButton
+export default React.memo(LangButton);

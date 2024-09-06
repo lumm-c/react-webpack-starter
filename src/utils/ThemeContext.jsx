@@ -1,4 +1,5 @@
-import React, { createContext, useState, useContext } from 'react';
+// src/utils/ThemeContext.js
+import React, { createContext, useState, useContext, useCallback } from 'react';
 
 // 創建一個主題上下文
 const ThemeContext = createContext();
@@ -7,9 +8,10 @@ const ThemeContext = createContext();
 export const ThemeProvider = ({ children }) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    const toggleTheme = () => {
+    // 使用 useCallback 優化 toggleTheme，確保函數只在依賴變更時重新生成
+    const toggleTheme = useCallback(() => {
         setIsDarkMode(prevMode => !prevMode);
-    };
+    }, []);
 
     return (
         <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>

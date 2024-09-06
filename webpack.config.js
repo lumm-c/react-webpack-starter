@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+var webpack = require("webpack");
 
 module.exports = {
     entry: path.join(__dirname, 'src/index.js'),
@@ -39,6 +39,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({ template: './public/index.html' }),
+        new webpack.DefinePlugin({
+            'process.env.REACT_APP_VERSION': JSON.stringify(require("./package.json").version),
+        }),
     ],
     resolve: {
         alias: {

@@ -9,10 +9,14 @@ const Logo = ({ }) => {
 
     const { isDarkMode } = useTheme();
 
+    if (process.env.NODE_ENV !== 'production') {
+        console.log('Logo rendered');
+    }
+
     return (
         <img src={isDarkMode ? logoDark : logoLight}
             alt="Logo" className={styles.img} />
     )
 }
 
-export default Logo
+export default React.memo(Logo);
