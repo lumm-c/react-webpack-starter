@@ -12,14 +12,6 @@ body {
     /* 防止滾動條 */
 }
 
-@font-face {
-    font-family: 'Open Huninn';
-    src: url('@/assets/fonts/open-huninn-font/jf-openhuninn.woff2') format('woff2'),
-        url('@/assets/fonts/open-huninn-font/jf-openhuninn.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 .appContainer {
     display: flex;
     flex-direction: column;
