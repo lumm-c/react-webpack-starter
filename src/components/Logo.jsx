@@ -1,6 +1,7 @@
 import React from 'react'
 import * as styles from './Logo.module.scss';
 import { useTheme } from '@/utils/ThemeContext';
+import { log, logLevel } from '@/utils/log';
 
 const Logo = ({ }) => {
     // 使用 require 導入圖片
@@ -9,9 +10,8 @@ const Logo = ({ }) => {
 
     const { isDarkMode } = useTheme();
 
-    if (process.env.NODE_ENV !== 'production') {
-        console.log('Logo rendered');
-    }
+    log(logLevel.DEBUG, 'Logo rendered');
+
 
     return (
         <img src={isDarkMode ? logoDark : logoLight}

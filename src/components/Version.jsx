@@ -1,11 +1,11 @@
 import React from 'react';
+import { log, logLevel } from '@/utils/log';
 
 const Version = () => {
     const appVersion = process.env.REACT_APP_VERSION;;
 
-    if (process.env.NODE_ENV !== 'production') {
-        console.log('Version rendered');
-    }
+    log(logLevel.DEBUG, 'Version rendered');
+
 
     return (
         <div>
