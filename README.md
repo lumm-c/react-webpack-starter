@@ -1,12 +1,14 @@
 # React Webpack Starter
 
-This repository serves as a starter template for building React applications with Webpack. It provides a basic setup for developers who want to get started quickly with React and Webpack, including support for JSX, ES6+, and hot module replacement.
+This repository serves as a starter template for building React applications with Webpack. It provides a robust setup for developers who want to get started quickly with React and Webpack, including support for JSX, ES6+, hot module replacement, and advanced log management for performance monitoring.
 
 ## Features
 
 - 🌓 **Dark/Light Theme Switching**: Toggle between light and dark modes.
 - 🌐 **Multi-Language Support**: Easily switch between English and Chinese.
 - 🔄 **Dynamic Updates**: Instant changes for both theme and language settings.
+- 📊 **Log Level Control**:  Log Level Control: Manage log levels (DEBUG, INFO, WARN, ERROR) dynamically based on the environment, optimizing performance.
+
 
 ## Project Structure
 
@@ -19,7 +21,8 @@ react-webpack-starter/
 │   ├── pages/              # Page-level components
 │   ├── styles/             # Global styles
 │   ├── utils/              # Utility functions and helpers
-│   │   └── i18n.js         # Language configuration
+│   │   ├── i18n.js         # Language configuration
+│   │   └── config.js       # Application configuration
 │   ├── App.js              # Main application component
 ├── docs/                   # Images for README and documentation
 ├── README.md               # Project documentation
@@ -62,6 +65,7 @@ Once the application is running, open http://localhost:3000 in your browser and 
 
 - Switch between Light Mode and Dark Mode by clicking the toggle button.
 - Switch between English and Chinese by clicking the toggle button.
+- Enjoy optimized performance with dynamic log level control based on the config.js.
 
 ### Screenshots
 
