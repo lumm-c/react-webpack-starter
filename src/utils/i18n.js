@@ -10,8 +10,14 @@ i18n.use(initReactI18next).init({
                 welcome: "Welcome to Panda Park!",
                 description: "We are dedicated to protecting pandas and sharing their stories.",
                 switch: "Choose Language",
-                switch_to_dark: "Switch to Dark Mode",
-                switch_to_light: "Switch to Light Mode"
+                dark_mode: "🌙 Dark Mode",
+                light_mode: "🌤️ Light Mode",
+                homepage: {
+                    title: "Welcome to Adventure",
+                    subtitle: "Pick your stage",
+                    basic_stage: "📚 Basic Stage",
+                    advanced_stage: "🚀 Advanced Stage",
+                }
             }
         },
         zh: {
@@ -19,8 +25,14 @@ i18n.use(initReactI18next).init({
                 welcome: "歡迎來到熊貓樂園！",
                 description: "我們致力於保護與珍愛熊貓，並與世界分享牠們的故事。",
                 switch: "選擇語言",
-                switch_to_dark: "切換到深色模式",
-                switch_to_light: "切換到淺色模式"
+                dark_mode: "🌙 深色模式",
+                light_mode: "🌤️ 淺色模式",
+                homepage: {
+                    title: "歡迎來到冒險世界",
+                    subtitle: "選擇你的挑戰階段",
+                    basic_stage: "📚 基礎階段",
+                    advanced_stage: "🚀 進階階段",
+                }
             }
         },
     },

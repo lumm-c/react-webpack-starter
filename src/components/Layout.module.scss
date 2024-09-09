@@ -1,0 +1,80 @@
+/* App.module.scss */
+@import '@/styles/theme';
+@import '@/styles/language';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.appContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+
+    // 根據主題應用樣式的 Mixin
+    @mixin theme-container($theme) {
+        background-color: map-get(map-get($themes, $theme), "background-primary");
+        color: map-get(map-get($themes, $theme), "text-primary");
+    }
+
+    // light-mode 樣式
+    &.lightMode {
+        @include theme-container("light-mode");
+    }
+
+    // dark-mode 樣式
+    &.darkMode {
+        @include theme-container("dark-mode");
+    }
+}
+
+/* 頭部樣式 */
+header {
+    position: fixed;
+    top: 0;
+    background-color: inherit;
+    z-index: 10;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* 導航按鈕的樣式 */
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+.mainContent {
+    flex: 1;
+    /* 這裡讓 main 區域擴展並填滿剩餘空間 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px;
+    /* 確保 main 不被 header 覆蓋 */
+    padding-bottom: 40px;
+    /* 確保 main 不被 footer 覆蓋 */
+}
+
+/* 頁腳樣式 */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: inherit;
+    /* 使用父級背景色 */
+
+}

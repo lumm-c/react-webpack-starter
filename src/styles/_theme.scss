@@ -1,58 +1,25 @@
-// Light Mode 配色
-$primary-color: #0066FF; // 主按鈕顏色
-$secondary-color: #FF9900; // 次按鈕顏色
+$themes: (
+    "light-mode": ("primary": #4A90E2, // 亮藍色，用於Basic Stage按鈕
+        "secondary": #F5A623, // 亮橙色，用於Advanced Stage按鈕
+        "background-primary": #FFFFFF, // 白色背景
+        "background-accent": #F0F0F0, // 淺灰色背景
+        "highlight": #FFEB3B, // 淡黃色，用於亮點或特定強調部分
+        "text-primary": #333333, // 深灰色文字，用於標題和主要文字
+        "text-secondary": #666666, // 中灰色，用於次要文字
+        "button-text": #FFFFFF, // 按鈕文字白色
+        "button-primary-hover": darken(#4A90E2, 10%), // 基本按鈕 Hover 顏色
+        "button-secondary-hover": darken(#F5A623, 10%) // 進階按鈕 Hover 顏色
+    ),
 
-// Grayscale
-$color-dark: #1C1C1C; // 深黑色
-$color-grey-dark: #A9A9A9; // 暗灰色
-$color-grey-medium-dark: #D3D3D3; // 淡灰色
-$color-grey: #E6E6FA; // 淡紫色
-$color-grey-light: #F5F5F5; // 淺灰色
-$color-white: #FFFFFF; // 白色
-
-// Dark Mode Colors
-$primary-color-dark: #3399FF; // Dark background color
-$secondary-color-dark: #FFB84D; // GreyDark (灰色)
-$dark-mode-bg: #333; // Dark background for deeper sections
-$dark-mode-dark: #FFFFFF; // Light text color
-$dark-mode-greydark: #696969; // Grey text color
-
-// Backgrounds
-$background-color-primary: $color-grey-light; // 主背景
-$background-color-secondary: $color-white; // 次背景
-
-// Text colors
-$text-color-primary: $color-dark; // 標題文字
-$text-color-secondary: $color-grey-dark; // 次要文字
-
-// Button
-$button-primary-background: $primary-color; // 主要按鈕背景
-$button-primary-text: $color-white; // 主要按鈕文字
-$button-secondary-background: $secondary-color; // 次要按鈕背景
-$button-secondary-text: $color-white; // 次要按鈕文字
-
-// Dark Mode 配色
-$primary-color-dark: #3399FF; // 主按鈕顏色 (Dark Mode)
-$secondary-color-dark: #FFB84D; // 次按鈕顏色 (Dark Mode)
-
-// Grayscale
-$color-dark-mode-dark: #FFFFFF; // 白色
-$color-dark-mode-grey-dark: #D3D3D3; // 淡灰色
-$color-dark-mode-grey-medium-dark: #A9A9A9; // 暗灰色
-$color-dark-mode-grey: #696969; // 灰色
-$color-dark-mode-grey-light: #3A3A3A; // 深灰色
-$color-dark-mode-black: #1C1C1C; // 深黑色
-
-// Backgrounds
-$background-color-dark-primary: $color-dark-mode-black; // 主背景 (深黑)
-$background-color-dark-secondary: $color-dark-mode-grey-light; // 次背景 (深灰)
-
-// Text colors
-$text-color-dark-primary: $color-dark-mode-dark; // 標題文字 (白色)
-$text-color-dark-secondary: $color-dark-mode-grey-dark; // 次要文字 (淡灰色)
-
-// Button
-$button-dark-primary-background: $primary-color-dark; // 主要按鈕背景
-$button-dark-primary-text: $color-dark-mode-black; // 主要按鈕文字
-$button-dark-secondary-background: $secondary-color-dark; // 次要按鈕背景
-$button-dark-secondary-text: $color-dark-mode-black; // 次要按鈕文字
+    "dark-mode": ("primary": #4A90E2, // 亮藍色，用於Basic Stage按鈕
+        "secondary": #F5A623, // 亮橙色，用於Advanced Stage按鈕
+        "background-primary": #2C3E50, // 深藍色背景
+        "background-accent": #37474F, // 深灰藍背景圖案（山）
+        "highlight": #FFEB3B, // 淡黃色，用於月亮或亮點
+        "text-primary": #FFFFFF, // 白色文字，用於標題和主要文字
+        "text-secondary": #B0BEC5, // 淡灰色文字，用於次要文字
+        "button-text": #FFFFFF, // 按鈕文字白色
+        "button-primary-hover": darken(#4A90E2, 10%), // 基本按鈕 Hover 顏色
+        "button-secondary-hover": darken(#F5A623, 10%) // 進階按鈕 Hover 顏色
+    )
+);
