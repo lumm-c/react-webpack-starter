@@ -4,10 +4,12 @@ This repository serves as a starter template for building React applications wit
 
 ## Features
 
-- 🌓 **Dark/Light Theme Switching**: Toggle between light and dark modes.
-- 🌐 **Multi-Language Support**: Easily switch between English and Chinese.
-- 🔄 **Dynamic Updates**: Instant changes for both theme and language settings.
-- 📊 **Log Level Control**:  Log Level Control: Manage log levels (DEBUG, INFO, WARN, ERROR) dynamically based on the environment, optimizing performance.
+- 🌓 Dark/Light Theme Switching: Toggle between light and dark modes.
+- 🌐 Multi-Language Support: Easily switch between English and Chinese.
+- 🔄 Dynamic Updates: Instant changes for both theme and language settings.
+- 🛠️ Modularized Structure: Components and pages are organized for clarity and maintainability.
+- 🧭 React Router for Navigation: Seamless page navigation with React Router for SPA functionality.
+- n📊 Log Level Control: Manage log levels (DEBUG, INFO, WARN, ERROR) dynamically based on the environment, optimizing performance.
 
 
 ## Project Structure
@@ -18,7 +20,11 @@ react-webpack-starter/
 ├── src/                    # React source code
 │   ├── assets/             # Assets (images, fonts, etc.)
 │   ├── components/         # React components
+│   │   ├── Layout.jsx      # Layout component with navigation and footer
 │   ├── pages/              # Page-level components
+│   │   ├── HomePage.jsx    # Home page with navigation to stages
+│   │   ├── BasicStage.jsx  # Basic stage page
+│   │   ├── IntermediateStage.jsx # Intermediate stage page
 │   ├── styles/             # Global styles
 │   ├── utils/              # Utility functions and helpers
 │   │   ├── i18n.js         # Language configuration
@@ -66,6 +72,8 @@ Once the application is running, open http://localhost:3000 in your browser and 
 - Switch between Light Mode and Dark Mode by clicking the toggle button.
 - Switch between English and Chinese by clicking the toggle button.
 - Enjoy optimized performance with dynamic log level control based on the config.js.
+- Navigate between different stages (Home, Basic Stage, Intermediate Stage) using React Router.
+
 
 ### Screenshots
 
