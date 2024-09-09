@@ -1,16 +1,76 @@
 // _button.scss
-
 @mixin button-styles($bg-color, $text-color) {
+    font-size: 20px;
     padding: 10px 20px;
-    font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
     background-color: $bg-color;
     color: $text-color;
+    min-height: 45px;
+    display: flex;
+    /* 使用 Flexbox 保證文字垂直和水平都居中 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 
+    /* 垂直居中 */
     &:hover {
         background-color: darken($bg-color, 10%);
+    }
+}
+
+@mixin menu-button($bg-color, $text-color) {
+    font-size: 14px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: $bg-color;
+    color: $text-color;
+    min-height: 45px;
+    display: flex;
+    /* 使用 Flexbox 保證文字垂直和水平都居中 */
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    /* 垂直居中 */
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
+
+// 根據主題來設置按鈕顏色
+@mixin theme-button($theme, $btn-type) {
+    @if $btn-type =="light" {
+        @include menu-button(map-get(map-get($themes, $theme), "primary"), // primary color from theme
+            map-get(map-get($themes, $theme), "button-text") // button text color
+        );
+    }
+
+    @else if $btn-type =="dark" {
+        @include menu-button(map-get(map-get($themes, $theme), "primary"), // primary color from theme
+            map-get(map-get($themes, $theme), "button-text") // button text color
+        );
+    }
+}
+
+// 根據主題來設置按鈕顏色
+@mixin game-button($theme, $btn-type) {
+    @if $btn-type =="light" {
+        @include button-styles(map-get(map-get($themes, $theme), "primary"), // primary color from theme
+            map-get(map-get($themes, $theme), "button-text") // button text color
+        );
+    }
+
+    @else if $btn-type =="dark" {
+        @include button-styles(map-get(map-get($themes, $theme), "primary"), // primary color from theme
+            map-get(map-get($themes, $theme), "button-text") // button text color
+        );
     }
 }
