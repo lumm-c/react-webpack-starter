@@ -34,26 +34,14 @@
     gap: 15px;
 }
 
-.light_basic_btn {
+.basic_btn {
     text-decoration: none;
     padding: 10px 20px;
-    @include game-button("light-mode", "light");
+    @include button-styles(--primary);
 }
 
-.dark_basic_btn {
+.adv_btn {
     text-decoration: none;
     padding: 10px 20px;
-    @include game-button("dark-mode", "dark");
-}
-
-.light_adv_btn {
-    text-decoration: none;
-    padding: 10px 20px;
-    @include game-button("light-mode", "light");
-}
-
-.dark_adv_btn {
-    text-decoration: none;
-    padding: 10px 20px;
-    @include game-button("dark-mode", "dark");
+    @include button-styles(--secondary);
 }

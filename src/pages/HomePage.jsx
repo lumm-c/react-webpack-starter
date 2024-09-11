@@ -23,13 +23,11 @@ const HomePage = () => {
                 <p className={styles.subtitle}>{t('homepage.subtitle')}</p>
 
                 <div className={styles.buttonContainer}>
-                    <Link to="/intro" className={
-                        `${isDarkMode ? styles.dark_basic_btn : styles.light_basic_btn}`}>
+                    <Link to="/intro" className={styles.basic_btn}>
                         {t('homepage.basic_stage')}
                     </Link>
-                    <Link to="/portfolio" className={
-                        `${isDarkMode ? styles.dark_adv_btn : styles.light_adv_btn}`
-                    }>
+                    <Link to="/portfolio" className={styles.adv_btn}
+                    >
                         {t('homepage.advanced_stage')}
                     </Link>
                 </div>
