@@ -1,12 +1,11 @@
 @import '@/styles/button';
 @import '@/styles/theme';
 
-.light_theme_btn {
-    margin: 5px;
-    @include theme-button("light-mode", "light");
-}
 
-.dark_theme_btn {
-    margin: 5px;
-    @include theme-button("dark-mode", "dark");
+/* 主題切換按鈕 */
+.toggleTheme {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }

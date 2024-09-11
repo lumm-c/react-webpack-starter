@@ -5,20 +5,17 @@ import { useMemo } from 'react';
 import { log, logLevel } from '@/utils/log';
 
 
-const ThemeButton = ({ buttonText }) => {
+const ThemeButton = ({ }) => {
     const { isDarkMode, toggleTheme } = useTheme();
 
-    const buttonStyle = useMemo(() => {
-        return isDarkMode ? styles.dark_theme_btn : styles.light_theme_btn;
-    }, [isDarkMode]);
 
     log(logLevel.DEBUG, 'ThemeButton rendered');
 
     return (
         <button
-            className={buttonStyle}
+            className={styles.toggleTheme}
             onClick={toggleTheme}>
-            {buttonText}
+            {isDarkMode ? '🌙' : '☀️'}
         </button>
     );
 }

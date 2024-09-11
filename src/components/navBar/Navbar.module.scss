@@ -1,0 +1,186 @@
+@import '@/styles/theme';
+@import '@/styles/language';
+
+.navbar {
+    display: flex;
+    justify-content: space-between; // 左右對齊
+    align-items: center; // 垂直方向居中
+    padding: 10px 20px;
+    border-radius: 10px; //  外圍的黑色邊框 
+    position: relative;
+    height: 70%;
+    max-width: 80%;
+    margin: 5px auto;
+
+    // 根據主題應用樣式的 Mixin
+    @mixin theme-container($theme) {
+        border-bottom: 2px solid map-get(map-get($themes, $theme), "text-primary");
+        border: 2px solid map-get(map-get($themes, $theme), "text-primary");
+
+        .navbarLinks li a {
+            position: relative; // 使文字相對定位，偽元素能相對於它定位
+            color: map-get(map-get($themes, $theme), "text-secondary");
+
+            // 當菜單項目被選中時
+            &.active,
+            &.selected {
+                color: map-get(map-get($themes, $theme), "text-primary"); // 被選中時的顏色
+            }
+
+            // 當菜單項目被選中時, 添加筆刷效果的偽元素
+            &.active::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0; // 確保偽元素貼合文字底部
+                width: 100%;
+                height: 0.5em; // 根據需要調整高度，這裡使用字體高度的一半
+                background-color: map-get(map-get($themes, $theme), "primary"); // 被選中時的顏色; 
+                border-radius: 4px; // 使背景稍微圓潤，模仿筆刷效果
+                opacity: 0.6; // 調整透明度，使背景不會過於明顯
+                transition: width 0.3s ease; // 添加動畫效果
+            }
+        }
+    }
+
+    // light-mode 樣式
+    &.lightMode {
+        @include theme-container("light-mode");
+    }
+
+    // dark-mode 樣式
+    &.darkMode {
+        @include theme-container("dark-mode");
+    }
+}
+
+
+.navbar_brand {
+    display: flex;
+    align-items: center; // 保證 Logo 與按鈕垂直居中
+}
+
+.navbar_brand a {
+    text-decoration: none;
+    font-weight: normal;
+
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.navbarLinks {
+    display: flex;
+
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1; // 讓選單內容自適應填充空間，確保中心位置 
+
+}
+
+.navbarLinks li a {
+    text-decoration: none;
+
+    font-size: 24px;
+    font-weight: normal;
+    transition: color 0.3s;
+
+    &.active::after {
+        z-index: -1;
+    }
+}
+
+.sideMenu {
+    display: flex;
+    justify-content: space-between; // 預設為讓選單內容均勻分佈 
+    align-items: center;
+    flex-grow: 1;
+}
+
+.hamburgerMenu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+
+.themeButton {
+    margin-left: auto; // 讓ThemeButton獨立靠右對齊 
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        max-width: 80%;
+
+        @mixin theme-container($theme) {
+            .sideMenu {
+                border: 2px solid map-get(map-get($themes, $theme), "text-primary");
+                background: linear-gradient(180deg,
+                        map-get(map-get($themes, $theme), "background-primary") 0%,
+                        lighten(map-get(map-get($themes, $theme), "background-primary"), 3%) 100%);
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+        }
+
+        // light-mode 樣式
+        &.lightMode {
+            @include theme-container("light-mode");
+        }
+
+        // dark-mode 樣式
+        &.darkMode {
+            @include theme-container("dark-mode");
+        }
+
+    }
+
+    .sideMenu {
+        display: none;
+        position: absolute;
+        top: 55px;
+        right: 0;
+        margin-right: 5%;
+        width: 30%;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        align-items: center;
+
+    }
+
+    .navbarLinks li a.active::after {
+        z-index: 0;
+    }
+
+    .navbarLinks {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .themeButton {
+        margin-top: 20px; // 增加與選單項目間距，確保按鈕與選單分開 
+        align-self: center; // 讓ThemeButton也保持居中對齊 
+    }
+
+    .menuOpen {
+        display: flex;
+    }
+
+    .hamburgerMenu {
+        display: block;
+        transition: transform 0.3s ease-in-out;
+
+        &:active {
+            transform: scale(0.9); // 點擊時縮小
+        }
+    }
+}

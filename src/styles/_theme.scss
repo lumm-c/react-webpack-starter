@@ -1,25 +1,19 @@
 $themes: (
-    "light-mode": ("primary": #4A90E2, // 亮藍色，用於Basic Stage按鈕
-        "secondary": #F5A623, // 亮橙色，用於Advanced Stage按鈕
-        "background-primary": #FFFFFF, // 白色背景
-        "background-accent": #F0F0F0, // 淺灰色背景
-        "highlight": #FFEB3B, // 淡黃色，用於亮點或特定強調部分
-        "text-primary": #333333, // 深灰色文字，用於標題和主要文字
-        "text-secondary": #666666, // 中灰色，用於次要文字
-        "button-text": #FFFFFF, // 按鈕文字白色
-        "button-primary-hover": darken(#4A90E2, 10%), // 基本按鈕 Hover 顏色
-        "button-secondary-hover": darken(#F5A623, 10%) // 進階按鈕 Hover 顏色
+    "light-mode": ("primary": #FFC0CB, // 淡粉色，用於Basic Stage按鈕
+        "secondary": #E6E6FA, // 淡紫色，用於Advanced Stage按鈕
+        "background-primary": #FFFFF0, // 淡黃色, 白色背景
+        "highlight": #FFD700, // 金黃色，用於亮點或特定強調部分
+        "text-primary": #1C1C1C, // 深灰色文字，用於標題和主要文字
+        "text-secondary": #A9A9A9, // 中灰色，用於次要文字
+        "button-text": #1C1C1C, // 按鈕文字黑色
     ),
 
     "dark-mode": ("primary": #4A90E2, // 亮藍色，用於Basic Stage按鈕
         "secondary": #F5A623, // 亮橙色，用於Advanced Stage按鈕
         "background-primary": #2C3E50, // 深藍色背景
-        "background-accent": #37474F, // 深灰藍背景圖案（山）
-        "highlight": #FFEB3B, // 淡黃色，用於月亮或亮點
+        "highlight": #FFC107, // 淡黃色，用於月亮或亮點
         "text-primary": #FFFFFF, // 白色文字，用於標題和主要文字
-        "text-secondary": #B0BEC5, // 淡灰色文字，用於次要文字
+        "text-secondary": #90A4AE, // 淡灰色文字，用於次要文字
         "button-text": #FFFFFF, // 按鈕文字白色
-        "button-primary-hover": darken(#4A90E2, 10%), // 基本按鈕 Hover 顏色
-        "button-secondary-hover": darken(#F5A623, 10%) // 進階按鈕 Hover 顏色
     )
 );
