@@ -1,4 +1,4 @@
-/* App.module.scss */
+/* Layout.module.scss */
 @import '@/styles/theme';
 @import '@/styles/language';
 
@@ -35,24 +35,6 @@ body {
     }
 }
 
-/* 頭部樣式 */
-header {
-    position: fixed;
-    top: 0;
-    background-color: inherit;
-    z-index: 10;
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-/* 導航按鈕的樣式 */
-nav {
-    display: flex;
-    gap: 8px;
-}
-
 .mainContent {
     flex: 1;
     /* 這裡讓 main 區域擴展並填滿剩餘空間 */
@@ -67,6 +49,14 @@ nav {
     /* 確保 main 不被 footer 覆蓋 */
 }
 
+header {
+    position: fixed;
+    height: 60px;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
 /* 頁腳樣式 */
 footer {
     position: fixed;
@@ -77,4 +67,12 @@ footer {
     background-color: inherit;
     /* 使用父級背景色 */
 
+}
+
+.footer_menu {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
