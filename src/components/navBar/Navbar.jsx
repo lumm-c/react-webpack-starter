@@ -27,9 +27,7 @@ const Navbar = () => {
     const logo_dark = require('@/assets/logo_dark.svg');
 
     return (
-        <div className={`${styles.navbar}
-        ${isDarkMode ? styles.darkMode : styles.lightMode}`
-        } >
+        <div className={styles.navbar} >
             {/* 導航欄品牌區域 */}
             <div className={styles.navbar_brand}>
                 <a href="/" className="navbar-brand">

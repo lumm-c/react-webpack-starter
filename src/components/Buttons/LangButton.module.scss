@@ -1,12 +1,7 @@
 @import '@/styles/button';
 @import '@/styles/theme';
 
-.light_lang_btn {
+.lang_btn {
     margin: 5px;
-    @include theme-button("light-mode", "light");
-}
-
-.dark_lang_btn {
-    margin: 5px;
-    @include theme-button("dark-mode", "dark");
+    @include menu-button;
 }

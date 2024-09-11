@@ -8,7 +8,7 @@ This repository serves as a starter template for building React applications wit
 - 🌐 Multi-Language Support: Seamlessly switch between English and Chinese.
 - 🧭 React Router Integration: Smooth navigation with dynamic active link highlighting.
 - 📱 Responsive Design: Optimized layouts for both desktop and mobile, including a responsive hamburger menu.
-- ✨ Sass-based Theme Management: Flexible theme customization using Sass map-get for color control.
+- ✨ CSS Variables-Based Theme Management: Simplified theme customization and management using CSS variables for dynamic and maintainable theme control.
 - 🖌️ Visual Enhancements: Add a brush-style effect to highlight active navigation items dynamically.
 
 

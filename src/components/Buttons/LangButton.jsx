@@ -7,7 +7,7 @@ import loadChineseFont from '@/utils/loadChineseFont';
 
 const LangButton = ({ }) => {
     // 切換語言選項的函數
-    const { isDarkMode } = useTheme();
+
     const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
 
@@ -23,8 +23,7 @@ const LangButton = ({ }) => {
     log(logLevel.DEBUG, 'LangButton rendered');
 
     return (
-        <button
-            className={isDarkMode ? styles.dark_lang_btn : styles.light_lang_btn}
+        <button className={styles.lang_btn}
             onClick={toggleLanguage}>
             🌐 {currentLanguage.toUpperCase()} ▼
         </button>
