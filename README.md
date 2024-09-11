@@ -4,12 +4,12 @@ This repository serves as a starter template for building React applications wit
 
 ## Features
 
-- 🌓 Dark/Light Theme Switching: Toggle between light and dark modes.
-- 🌐 Multi-Language Support: Easily switch between English and Chinese.
-- 🔄 Dynamic Updates: Instant changes for both theme and language settings.
-- 🛠️ Modularized Structure: Components and pages are organized for clarity and maintainability.
-- 🧭 React Router for Navigation: Seamless page navigation with React Router for SPA functionality.
-- n📊 Log Level Control: Manage log levels (DEBUG, INFO, WARN, ERROR) dynamically based on the environment, optimizing performance.
+- 🌓 Dark/Light Theme Switching: Easily toggle between light and dark modes using a custom theme system.
+- 🌐 Multi-Language Support: Seamlessly switch between English and Chinese.
+- 🧭 React Router Integration: Smooth navigation with dynamic active link highlighting.
+- 📱 Responsive Design: Optimized layouts for both desktop and mobile, including a responsive hamburger menu.
+- ✨ Sass-based Theme Management: Flexible theme customization using Sass map-get for color control.
+- 🖌️ Visual Enhancements: Add a brush-style effect to highlight active navigation items dynamically.
 
 
 ## Project Structure
@@ -72,13 +72,14 @@ Once the application is running, open http://localhost:3000 in your browser and 
 - Switch between Light Mode and Dark Mode by clicking the toggle button.
 - Switch between English and Chinese by clicking the toggle button.
 - Enjoy optimized performance with dynamic log level control based on the config.js.
-- Navigate between different stages (Home, Basic Stage, Intermediate Stage) using React Router.
+- Use React Router to navigate between Home, Basic Stage, and Intermediate Stage.
 
 
 ### Screenshots
 
 Here is an example of how the application looks:
 ![github](./docs/Day11.gif)
+![github](./docs/Day12.gif)
 
 ### Contribution
 
