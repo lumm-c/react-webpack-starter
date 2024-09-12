@@ -17,6 +17,10 @@ i18n.use(initReactI18next).init({
                     subtitle: "Pick your stage",
                     basic_stage: "📚 Basic Stage",
                     advanced_stage: "🚀 Advanced Stage",
+                },
+                portfolio: {
+                    title: "I craft beautiful websites 💻 with love.",
+                    contact: "Contact me",
                 }
             }
         },
@@ -32,6 +36,10 @@ i18n.use(initReactI18next).init({
                     subtitle: "選擇你的挑戰階段",
                     basic_stage: "📚 基礎階段",
                     advanced_stage: "🚀 進階階段",
+                },
+                portfolio: {
+                    title: "我用心打造精美的網站 💻",
+                    contact: "聯絡我",
                 }
             }
         },

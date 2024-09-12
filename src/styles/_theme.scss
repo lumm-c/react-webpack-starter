@@ -1,22 +1,33 @@
 $themes: (
-    "light-mode": ("primary": #FFC0CB, // 淡粉色，用於Basic Stage按鈕
+    "light-mode": ( // light mode
+        "primary": #FFC0CB, // 淡粉色，用於Basic Stage按鈕
         "secondary": #E6E6FA, // 淡紫色，用於Advanced Stage按鈕
+        "tertiary":#D8BFD8,
+        "accent2": #B0E0E6,
         "background-primary": #FFFFF0, // 淡黃色, 白色背景
         "background-gradient-end": lighten(#FFFFF0, 3%), // 淡黃色調亮後的顏色
         "highlight": #FFD700, // 金黃色，用於亮點或特定強調部分
         "text-primary": #1C1C1C, // 深灰色文字，用於標題和主要文字
         "text-secondary": #A9A9A9, // 中灰色，用於次要文字
         "button-text": #1C1C1C, // 按鈕文字黑色
+        "disabled-state": #E6E6FA,
+        "disabled-text": #D3D3D3,
     ),
 
-    "dark-mode": ("primary": #4A90E2, // 亮藍色，用於Basic Stage按鈕
-        "secondary": #F5A623, // 亮橙色，用於Advanced Stage按鈕
+    "dark-mode": ( // dark mode
+        "primary": #4A90E2, // 亮藍色，用於Basic Stage按鈕
+        "secondary": #9370DB, // 亮橙色，用於Advanced Stage按鈕
+        "tertiary":#FF69B4,
+        "accent2": #4682B4,
         "background-primary": #2C3E50, // 深藍色背景
         "background-gradient-end": lighten(#2C3E50, 3%), // 淡黃色調亮後的顏色
         "highlight": #FFC107, // 淡黃色，用於月亮或亮點
-        "text-primary": #FFFFFF, // 白色文字，用於標題和主要文字
-        "text-secondary": #90A4AE, // 淡灰色文字，用於次要文字
-        "button-text": #FFFFFF, // 按鈕文字白色
+        "text-primary": #F5F5F5, // 白色文字，用於標題和主要文字
+        "text-secondary": #D3D3D3, // 淡灰色文字，用於次要文字
+        "button-text": #F5F5F5, // 按鈕文字白色
+        "disabled-state": #696969,
+        "disabled-text": #A9A9A9,
+
     )
 );
 

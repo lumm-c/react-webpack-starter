@@ -1,0 +1,116 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 16px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    // 尺寸樣式
+    &.small {
+        padding: 12px 24px;
+        font-size: 12px;
+    }
+
+    &.medium {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    &.large {
+        padding: 14px 33px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    &::after {
+        content: var(--after-content);
+        position: absolute;
+        top: 50%;
+        right: -3px;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 4px;
+    }
+
+    &:hover::after {
+        animation: bounce 1s infinite alternate;
+    }
+
+    &.disabled::after {
+        display: none;
+    }
+
+    &.primary {
+        background-color: var(--primary);
+        color: var(--text-primary);
+        border: 6px solid var(--text-primary);
+        border-radius: 40px;
+    }
+
+    &.secondary {
+        background-color: var(--secondary);
+        color: var(--text-primary);
+        border: 6px solid var(--text-primary);
+        border-radius: 40px;
+    }
+
+    &:hover {
+        background-color: var(--highlight);
+    }
+
+    &:active {
+        background-color: var(--accent2);
+    }
+
+    &.disabled {
+        background-color: var(--disabled-state);
+        color: var(--disabled-text);
+        cursor: not-allowed;
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    margin-right: 8px;
+}
+
+.right {
+    margin-left: 8px;
+}
+
+.loader {
+    border: 3px solid var(--text-primary);
+    border-top: 3px solid var(--primary);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(-50%) scale(1);
+    }
+
+    to {
+        transform: translateY(-50%) scale(1.1);
+    }
+}
