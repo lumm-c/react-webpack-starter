@@ -1,14 +1,29 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { log, logLevel } from '@/utils/log';
+import { useTheme } from '@/utils/ThemeContext';
+import Button from '@/components/buttons/Button';
 
 const IntermediateStage = () => {
 
+    const { t, i18n } = useTranslation();
+    const { isDarkMode } = useTheme();
+
+    const svgUrl = isDarkMode ? require('@/assets/buttons/dot_dark.svg') : require('@/assets/buttons/dot_light.svg');
+
     log(logLevel.DEBUG, 'IntermediateStage rendered');
+
 
     return (
         <div>
-            <h1>Intermediate Stage</h1>
-            <p>歡迎來到中階段的開發過程，我們會在此進一步完成你的作品集。</p>
+            <h1>{t('portfolio.title')} </h1>
+            <Button
+                type="primary"
+                afterContent={svgUrl}
+                size="large"
+            >
+                {t('portfolio.contact')}
+            </Button>
         </div>
     )
 }
