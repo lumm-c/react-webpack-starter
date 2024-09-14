@@ -1,3 +1,5 @@
+//src/components/navBar/navBar.jsx 
+
 import React, { useState } from 'react'
 import { useTheme } from '@/utils/ThemeContext'
 import ThemeButton from '@/components/buttons/ThemeButton';

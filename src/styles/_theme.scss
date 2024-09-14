@@ -13,7 +13,6 @@ $themes: (
         "disabled-state": #E6E6FA,
         "disabled-text": #D3D3D3,
     ),
-
     "dark-mode": ( // dark mode
         "primary": #4A90E2, // 亮藍色，用於Basic Stage按鈕
         "secondary": #9370DB, // 亮橙色，用於Advanced Stage按鈕
@@ -28,7 +27,15 @@ $themes: (
         "disabled-state": #696969,
         "disabled-text": #A9A9A9,
 
-    )
+    ),
+    "typography": ( // 文字樣式
+        "heading1": 60px,
+        "heading2": 36px,
+        "heading3": 30px,
+        "subtitle": 24px,
+        "body1": 16px,
+        "body2": 14px,
+    ),
 );
 
 // 將 Sass 變數轉換為 CSS 變數
@@ -37,5 +44,12 @@ $themes: (
         @each $property, $value in $theme-map {
             --#{$property}: #{$value};
         }
+    }
+}
+
+// 單獨處理字體樣式為全局CSS變數
+@each $property, $value in map-get($themes, 'typography') {
+    :root {
+        --#{$property}: #{$value};
     }
 }

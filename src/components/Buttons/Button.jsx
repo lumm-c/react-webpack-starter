@@ -46,7 +46,7 @@ function Button({
 Button.propTypes = {
     children: PropTypes.node.isRequired,
     type: PropTypes.oneOf(['primary', 'secondary']),
-    icon: PropTypes.string,
+    icon: PropTypes.node,
     iconPosition: PropTypes.oneOf(['left', 'right', 'top', 'bottom']),
     afterContent: PropTypes.string,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
