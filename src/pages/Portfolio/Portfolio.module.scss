@@ -1,0 +1,75 @@
+.heroContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 10%;
+    gap: 85px;
+}
+
+.heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 50%;
+    max-width: 540px;
+
+
+}
+
+.heroTitle {
+    font-size: var(--heading1);
+    line-height: 1.1;
+    letter-spacing: 2%;
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    font-weight: bold;
+
+}
+
+[data-lang="zh"] .heroTitle {
+    line-height: 1.5;
+}
+
+.hero_image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero_image img {
+    width: 100%; // 確保圖片適應父容器寬度 
+
+}
+
+.highlight {
+    position: relative;
+    display: inline-block;
+    z-index: 2;
+
+    &::after {
+        content: url('@/assets/portfolio/ball.svg');
+        position: absolute;
+        right: -20%;
+        top: -30%;
+        color: var(--text-primary);
+    }
+
+    [data-lang="zh"] &::after {
+        top: -50%; // 中文語言環境下的 top 設置
+        right: -30%;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 95%;
+        height: 0.5em;
+        background-color: var(--accent2);
+        opacity: 0.6; // 調整透明度，使背景不會過於明顯
+        z-index: -1;
+    }
+}
