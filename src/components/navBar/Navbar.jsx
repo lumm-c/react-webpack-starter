@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import { useTheme } from '@/utils/ThemeContext'
 import ThemeButton from '@/components/buttons/ThemeButton';
 import * as styles from '@/components/navBar/Navbar.module.scss';
+import LangButton from '@/components/buttons/LangButton';
 
 
 const Navbar = () => {
@@ -55,6 +56,7 @@ const Navbar = () => {
                 </div>
                 {/* 主題切換按鈕 */}
                 <ThemeButton className={styles.themeButton} />
+                <LangButton />
             </div>
             {/* 漢堡菜單按鈕 */}
             <button className={styles.hamburgerMenu} onClick={toggleMenu}>

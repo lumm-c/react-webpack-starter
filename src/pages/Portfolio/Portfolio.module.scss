@@ -3,8 +3,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 10px 10%;
-    gap: 85px;
+    margin: 35px 9% 10px 9%;
+    gap: 10vw;
 }
 
 .heroContent {
@@ -13,9 +13,7 @@
     align-items: flex-start;
     text-align: left;
     width: 50%;
-    max-width: 540px;
-
-
+    max-width: 590px;
 }
 
 .heroTitle {
@@ -23,24 +21,37 @@
     line-height: 1.1;
     letter-spacing: 2%;
     display: block;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
     font-weight: bold;
-
 }
 
 [data-lang="zh"] .heroTitle {
-    line-height: 1.5;
+    line-height: 1.3;
 }
 
-.hero_image {
+.imageContainer {
     flex: 1;
     text-align: center;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: +10%;
+        left: +10%;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        mask: url('@/assets/portfolio/border.svg') no-repeat center;
+        background-color: var(--text-primary); // 動態設置 SVG 的顏色
+    }
 }
 
-.hero_image img {
-    width: 100%; // 確保圖片適應父容器寬度 
-
+.heroImage {
+    position: relative;
+    display: block;
+    border: 4px solid var(--text-primary);
+    height: 90%;
 }
 
 .highlight {

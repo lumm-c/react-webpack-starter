@@ -1,0 +1,56 @@
+.statsContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; // 讓行高自動填充剩餘空間 
+    gap: 50px;
+    margin-top: 60px;
+    align-items: center; // 垂直居中 
+    flex: 1; // 讓 .subcontainer 撐滿父級容器 .container */
+}
+
+.stats {
+    display: flex;
+    align-items: flex-start;
+
+}
+
+.statsInView {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.statsItem {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 30px;
+}
+
+.number {
+    font-size: var(--heading2);
+    color: var(--error);
+    margin-right: 20px;
+    line-height: 1;
+    min-width: 48px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.label {
+    font-size: var(--heading3);
+    color: var(text-primary);
+    margin-top: 24px;
+    white-space: normal;
+    word-wrap: break-word;
+    max-width: 307px;
+    font-weight: bold;
+}
+
+.separator {
+    mask: url('@/assets/portfolio/separator.svg') no-repeat center;
+    background-color: var(--text-primary); // 用來改變 SVG 顏色
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
+}

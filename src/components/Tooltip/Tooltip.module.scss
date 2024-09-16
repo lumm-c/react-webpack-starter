@@ -1,0 +1,30 @@
+.tooltipContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipBox {
+    position: absolute;
+    bottom: +100%; // Tooltip 位於元素上方
+    left: -30%;
+    transform: translateX(-50%);
+    color: var(--text-primary);
+    padding: 8px;
+    border-radius: 4px;
+    font-size: var(--subtitle);
+    white-space: nowrap;
+    z-index: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+.tooltipArrow {
+    position: absolute;
+    bottom: -10%;
+    left: 100%;
+    transform: rotate(-25deg);
+    width: 100px;
+    height: 100px;
+    mask: url('@/assets/portfolio/arrow.svg') no-repeat center;
+    background-color: var(--text-primary); // 用來改變 SVG 顏色
+}

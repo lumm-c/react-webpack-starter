@@ -6,7 +6,7 @@ import Version from '@/components/Version';
 import * as styles from '@/components/Layout.module.scss'
 import Navbar from '@/components/navBar/Navbar';
 
-import { Link, useLocation } from 'react-router-dom'; // 引入 useLocation
+import { useLocation } from 'react-router-dom'; // 引入 useLocation
 import ThemeButton from '@/components/buttons/ThemeButton';
 
 const Layout = () => {
@@ -23,10 +23,12 @@ const Layout = () => {
                 <Outlet /> {/* 這裡渲染頁面的主要內容 */}
             </main>
             <footer>
-                <div className={styles.footer_menu}>
-                    <LangButton />
-                    <Version />
-                </div>
+                {!isAdvancedPage &&
+                    <div className={styles.footer_menu}>
+                        <LangButton />
+                        <Version />
+                    </div>
+                }
             </footer>
         </div>
     )

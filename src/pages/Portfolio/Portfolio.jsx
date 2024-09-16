@@ -4,7 +4,9 @@ import { log, logLevel } from '@/utils/log';
 import Button from '@/components/buttons/Button';
 import * as styles from '@/pages/Portfolio/Portfolio.module.scss'; // 使用模塊化的樣式
 import { motion } from 'framer-motion'; // 引入 Framer Motion
-
+import StatsSection from '@/components/Cards/StatsSection';
+import ComputerIcon from '@/components/Icons/ComputerIcon';
+import Tooltip from '@/components/Tooltip/Tooltip';
 
 const Portfolio = () => {
 
@@ -19,31 +21,37 @@ const Portfolio = () => {
     };
 
     return (
-        <div className={`${styles.heroContainer} ${i18n.language}`} data-lang={i18n.language}>
-            <div className={styles.heroContent}>
-                <img src={require('@/assets/portfolio/computer.svg')} />
-                <motion.h1
-                    className={styles.heroTitle}
-                    initial="hidden"
-                    animate="visible"
-                    variants={fadeIn}
-                >
-                    <Trans i18nKey="portfolio.title">
-                        I craft <span className={styles.highlight}>beautiful</span> websites 💻 with love.
-                    </Trans>
-                </motion.h1>
-                <Button
-                    type="primary"
-                    afterContent={require('@/assets/buttons/dot.svg')}
-                    size="large"
-                >
-                    {t('portfolio.contact')}
-                </Button>
-            </div >
-            <div className={styles.hero_image}>
-                <img src={require('@/assets/portfolio/heroimage.png')} alt="Meet Carol" />
+        <>
+            <div className={`${styles.heroContainer} ${i18n.language}`} data-lang={i18n.language}>
+                <div className={styles.heroContent}>
+                    <ComputerIcon strokeColor="var(--text-primary)" fillColor="var(--text-primary)" strokeWidth={0.5} />
+                    <motion.h1
+                        className={styles.heroTitle}
+                        initial="hidden"
+                        animate="visible"
+                        variants={fadeIn}
+                    >
+                        <Trans i18nKey="portfolio.title">
+                            I craft <span className={styles.highlight}>beautiful</span> websites 💻 with love.
+                        </Trans>
+                    </motion.h1>
+                    <Button
+                        type="primary"
+                        afterContent={require('@/assets/buttons/dot.svg')}
+                        size="large"
+                    >
+                        {t('portfolio.contact')}
+                    </Button>
+                </div >
+                <div className={styles.imageContainer}>
+                    <Tooltip text="Meet Carol </>">
+                        <img className={styles.heroImage} src={require('@/assets/portfolio/heroimage.png')} alt="Meet Carol" />
+                    </Tooltip>
+                </div>
             </div>
-        </div>
+            <StatsSection />
+        </>
+
     )
 }
 
