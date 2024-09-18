@@ -19,7 +19,7 @@ i18n.use(initReactI18next).init({
                     advanced_stage: "🚀 Advanced Stage",
                 },
                 portfolio: {
-                    title: "I craft beautiful websites 💻 with love.",
+                    title: "I craft <1>beautiful</1><br /> and functional websites 💻 with love.",
                     contact: "Contact me",
                 }
             }
@@ -38,7 +38,7 @@ i18n.use(initReactI18next).init({
                     advanced_stage: "🚀 進階階段",
                 },
                 portfolio: {
-                    title: "我用心打造精美的網站 💻",
+                    title: "我專注於打造<1>精美</1><br /> 且符合需求的網站 💻。",
                     contact: "聯絡我",
                 }
             }

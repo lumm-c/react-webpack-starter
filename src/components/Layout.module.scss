@@ -22,17 +22,14 @@ body {
 }
 
 .mainContent {
-    flex: 1;
-    /* 這裡讓 main 區域擴展並填滿剩餘空間 */
+    flex: 1; // 這裡讓 main 區域擴展並填滿剩餘空間 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 80px;
-    /* 確保 main 不被 header 覆蓋 */
-    padding-bottom: 40px;
-    /* 確保 main 不被 footer 覆蓋 */
+    padding-top: 80px; // 確保 main 不被 header 覆蓋 
+    padding-bottom: 40px; // 確保 main 不被 footer 覆蓋 
 }
 
 header {
@@ -41,6 +38,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 100;
+    background-color: var(--background-primary);
 }
 
 /* 頁腳樣式 */
@@ -50,8 +48,7 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: inherit;
-    /* 使用父級背景色 */
+    background-color: inherit; // 使用父級背景色 
 
 }
 

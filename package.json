@@ -1,6 +1,6 @@
 {
   "name": "test",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development",
@@ -14,12 +14,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "framer-motion": "^11.5.4",
     "i18next": "^23.14.0",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.3.1",
     "react-i18next": "^15.0.1",
     "react-icons": "^5.3.0",
+    "react-intersection-observer": "^9.13.1",
     "react-router-dom": "^6.26.1"
   },
   "devDependencies": {
