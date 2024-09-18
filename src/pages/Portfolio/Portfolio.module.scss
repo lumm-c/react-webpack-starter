@@ -1,10 +1,14 @@
+@import '@/styles/variables';
+
+// Mobile First 預設樣式（針對手機）
 .heroContainer {
     position: relative;
     display: flex;
+    flex-direction: column; // 手機上垂直排列
     align-items: center;
     justify-content: space-between;
-    margin: 35px 9% 10px 9%;
-    gap: 10vw;
+    margin: 2rem 5%;
+    gap: 15vh;
 }
 
 .heroContent {
@@ -12,13 +16,13 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
-    width: 50%;
-    max-width: 590px;
+    width: 80%;
+    gap: 5vh;
 }
 
 .heroTitle {
-    font-size: var(--heading1);
-    line-height: 1.1;
+    font-size: var(--heading2);
+    line-height: 1.2;
     letter-spacing: 2%;
     display: block;
     font-weight: bold;
@@ -30,20 +34,20 @@
 
 .imageContainer {
     flex: 1;
-    text-align: center;
+    width: 90%;
+    text-align: left;
     position: relative;
     z-index: 2;
 
-    &::after {
-        content: '';
+    .borderSVG {
         position: absolute;
-        top: +10%;
-        left: +10%;
+        top: 10%;
+        left: 10%;
         width: 100%;
         height: 100%;
         z-index: -1;
-        mask: url('@/assets/portfolio/border.svg') no-repeat center;
-        background-color: var(--text-primary); // 動態設置 SVG 的顏色
+        fill: none; // 確保沒有填充
+        stroke: var(--text-primary); // 動態設置 SVG 的邊框顏色
     }
 }
 
@@ -51,7 +55,7 @@
     position: relative;
     display: block;
     border: 4px solid var(--text-primary);
-    height: 90%;
+    width: 80%;
 }
 
 .highlight {
@@ -62,14 +66,14 @@
     &::after {
         content: url('@/assets/portfolio/ball.svg');
         position: absolute;
-        right: -20%;
-        top: -30%;
+        right: -12vw;
+        top: -50%;
         color: var(--text-primary);
     }
 
     [data-lang="zh"] &::after {
-        top: -50%; // 中文語言環境下的 top 設置
-        right: -30%;
+        right: -10vw;
+        top: -50%;
     }
 
     &::before {
@@ -82,5 +86,78 @@
         background-color: var(--accent2);
         opacity: 0.6; // 調整透明度，使背景不會過於明顯
         z-index: -1;
+    }
+}
+
+// 平板樣式
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1px) {
+    .heroContainer {
+        margin: 1.5rem 9% 1rem;
+        gap: 10vh;
+    }
+
+    .heroContent {
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .heroTitle {
+        font-size: var(--heading2);
+    }
+
+    .imageContainer {
+        width: 80%;
+        text-align: center;
+    }
+
+    .heroImage {
+        width: 70%;
+        height: auto;
+    }
+}
+
+// 桌機樣式
+@media (min-width: $breakpoint-tablet) {
+    .heroContainer {
+        flex-direction: row; // 桌機上水平排列
+        align-items: center;
+        margin: 1rem 9%;
+        gap: 10vw;
+    }
+
+    .heroContent {
+        width: 50%;
+        max-width: 590px;
+        align-items: flex-start;
+        text-align: left;
+        gap: 0vh;
+    }
+
+    .heroTitle {
+        font-size: var(--heading1);
+
+    }
+
+    .imageContainer {
+        width: auto;
+        text-align: center;
+    }
+
+    .heroImage {
+        width: auto;
+        height: 80%;
+    }
+
+    .highlight {
+        &::after {
+            right: -3vw;
+            top: -30%;
+        }
+
+        [data-lang="zh"] &::after {
+            right: -30%;
+            top: -50%;
+        }
     }
 }

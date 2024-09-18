@@ -1,6 +1,3 @@
-@import '@/styles/theme';
-@import '@/styles/language';
-
 .navbar {
     display: flex;
     justify-content: space-between; // 左右對齊
@@ -95,8 +92,8 @@
 @media (max-width: 768px) {
     .navbar {
         flex-direction: row;
-        max-width: 80%;
-
+        max-width: 70%;
+        height: 50%;
     }
 
     .sideMenu {

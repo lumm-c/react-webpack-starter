@@ -6,6 +6,7 @@ import * as styles from '@/pages/Portfolio/Portfolio.module.scss'; // 使用模�
 import { motion } from 'framer-motion'; // 引入 Framer Motion
 import StatsSection from '@/components/Cards/StatsSection';
 import ComputerIcon from '@/components/Icons/ComputerIcon';
+import Border from '@/components/Icons/Border';
 import Tooltip from '@/components/Tooltip/Tooltip';
 
 const Portfolio = () => {
@@ -46,6 +47,7 @@ const Portfolio = () => {
                 <div className={styles.imageContainer}>
                     <Tooltip text="Meet Carol </>">
                         <img className={styles.heroImage} src={require('@/assets/portfolio/heroimage.png')} alt="Meet Carol" />
+                        <Border className={styles.borderSVG} strokeColor="var(--text-primary)" fillColor="var(--text-primary)" strokeWidth={0.5} />
                     </Tooltip>
                 </div>
             </div>
