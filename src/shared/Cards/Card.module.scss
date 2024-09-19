@@ -1,0 +1,80 @@
+@import '@/styles/variables';
+
+// Mobile First 預設樣式（針對手機）
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column; // 手機上垂直排列
+    background-color: var(--grey-light);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    overflow: visible; // 確保邊框擴展到外部
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; // 確保卡片在邊框上顯示
+    min-height: 500px;
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px var(--text-primary);
+    }
+}
+
+.border {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px); // 邊框擴展到外部
+    height: calc(100% + 10px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.cardIcon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.cardTitle {
+    font-size: var(--subtitle);
+    margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+    font-size: var(--body1);
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.cardFooter {
+    margin-top: 1.5rem;
+
+    .cardCategory {
+        font-weight: bold;
+        font-size: var(--subtitle);
+    }
+
+    .cardDetails {
+        font-size: var(--body1);
+        color: var(--text-primary);
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .card {
+        max-width: 400px;
+        padding: 30px 30px;
+    }
+}
