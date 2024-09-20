@@ -5,16 +5,10 @@
     padding: 10px 20px;
     border-radius: 10px; //  外圍的黑色邊框 
     position: relative;
-    height: 70%;
+    height: 50%;
     max-width: 52%;
     margin: 5px auto;
     border: 2px solid var(--text-primary);
-}
-
-
-.navbar_brand {
-    display: flex;
-    align-items: center; // 保證 Logo 與按鈕垂直居中
 }
 
 .navbar_brand a {
@@ -23,6 +17,13 @@
 
     font-size: 24px;
     transition: color 0.3s ease-in-out;
+}
+
+.navbar_logo {
+    width: 100px;
+    height: 26px;
+    mask: url('@/assets/icons/logo.svg') no-repeat center;
+    background-color: var(--text-primary); // 用來改變 SVG 顏色
 }
 
 .navbarLinks {

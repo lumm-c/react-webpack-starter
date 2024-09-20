@@ -21,7 +21,30 @@ i18n.use(initReactI18next).init({
                 portfolio: {
                     title: "I craft <1>beautiful</1><br /> and functional websites 💻 with love.",
                     contact: "Contact me",
-                }
+                },
+                cardsData: [
+                    {
+                        icon: "React.png",
+                        title: "Frontend Developer",
+                        description: "Building engaging, responsive websites that transform ideas into seamless user experiences.",
+                        category: "Languages",
+                        details: "JavaScript (ES6+), TypeScript, HTML, CSS, Sass"
+                    },
+                    {
+                        icon: "Figma.png",
+                        title: "UI/UX Designer",
+                        description: "Crafting user-centered designs balancing aesthetics and functionality for optimal usability.",
+                        category: "Tools",
+                        details: "Figma, Photoshop, Prototyping"
+                    },
+                    {
+                        icon: "Training.png",
+                        title: "Mentor",
+                        description: "Guiding developers and designers with practical insights and real-world project experience.",
+                        category: "Specializations",
+                        details: "Code Reviews, Problem-Solving, Career Guidance"
+                    }
+                ]
             }
         },
         zh: {
@@ -40,7 +63,30 @@ i18n.use(initReactI18next).init({
                 portfolio: {
                     title: "我專注於打造<1>精美</1><br /> 且符合需求的網站 💻。",
                     contact: "聯絡我",
-                }
+                },
+                cardsData: [
+                    {
+                        icon: "React.png",
+                        title: "前端開發者",
+                        description: "構建引人入勝的響應式網站，將想法轉化為無縫的用戶體驗。",
+                        category: "語言",
+                        details: "JavaScript (ES6+), TypeScript, HTML, CSS, Sass"
+                    },
+                    {
+                        icon: "Figma.png",
+                        title: "UI/UX 設計師",
+                        description: "創造以用戶為中心的設計，平衡美觀與功能性，實現最佳可用性。",
+                        category: "工具",
+                        details: "Figma, Photoshop, Prototyping"
+                    },
+                    {
+                        icon: "Training.png",
+                        title: "導師",
+                        description: "為開發者和設計師提供實用的建議和實際項目經驗。",
+                        category: "專業",
+                        details: "代碼審查、問題解決、職業指導"
+                    }
+                ]
             }
         },
     },

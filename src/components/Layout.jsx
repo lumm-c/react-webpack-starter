@@ -1,13 +1,12 @@
 //src/components/Layout.jsx
 import React from 'react'
 import { Outlet } from 'react-router-dom';
-import LangButton from '@/components/buttons/LangButton';
+import LangButton from '@/components/navBar/LangButton';
 import Version from '@/components/Version';
 import * as styles from '@/components/Layout.module.scss'
 import Navbar from '@/components/navBar/Navbar';
-
+import ThemeButton from '@/components/navBar/ThemeButton';
 import { useLocation } from 'react-router-dom'; // 引入 useLocation
-import ThemeButton from '@/components/buttons/ThemeButton';
 
 const Layout = () => {
 

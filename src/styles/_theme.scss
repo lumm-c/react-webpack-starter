@@ -12,6 +12,7 @@ $themes: (
         "button-text": #1C1C1C, // 按鈕文字黑色
         "disabled-state": #E6E6FA,
         "disabled-text": #D3D3D3,
+        "grey-light":#F5F5F5,
         "error": #FF6961,
     ),
     "dark-mode": ( // dark mode
@@ -27,15 +28,15 @@ $themes: (
         "button-text": #F5F5F5, // 按鈕文字白色
         "disabled-state": #696969,
         "disabled-text": #A9A9A9,
+        "grey-light":#2C2C2C,
         "error": #FF4500,
-
     ),
     "typography": ( // 文字樣式
         "heading1": 60px,
         "heading2": 36px,
         "heading3": 30px,
         "subtitle": 24px,
-        "body1": 16px,
+        "body1": 18px,
         "body2": 14px,
     ),
 );
