@@ -5,6 +5,7 @@ import * as styles from '@/components/navBar/Navbar.module.scss';
 import LangButton from '@/components/navBar/LangButton';
 import useScrollSpy from '@/utils/useScrollSpy';
 
+
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // 控制菜單開關
     const [activeLink, setActiveLink] = useState(0); // 控制當前選中的菜單項目

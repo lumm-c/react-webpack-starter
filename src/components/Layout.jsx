@@ -8,7 +8,6 @@ import Navbar from '@/components/navBar/Navbar';
 import ThemeButton from '@/components/navBar/ThemeButton';
 import { useLocation } from 'react-router-dom'; // 引入 useLocation
 
-
 const Layout = () => {
 
     const location = useLocation(); // 獲取當前路徑
