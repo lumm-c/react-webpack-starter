@@ -1,7 +1,7 @@
 //src/shared/buttons/button.jsx
 import React from 'react';
 import PropTypes from 'prop-types';
-import * as styles from '@/shared/buttons/Button.module.scss';
+import * as styles from '@/shared/Buttons/Button.module.scss';
 
 function Button({
     type = 'primary',
