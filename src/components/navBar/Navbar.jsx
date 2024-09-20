@@ -34,7 +34,7 @@ const Navbar = () => {
         handleScroll(link);  // 滾動到對應區塊
     };
 
-    // 定義滾動函數，實現平滑滾動
+    // 定義滾動函數，實現平滑滾動並解決導航欄遮擋問題
     const handleScroll = (id) => {
         const element = document.getElementById(id);
         if (id === 'home') {
@@ -45,7 +45,7 @@ const Navbar = () => {
         } else {
             const element = document.getElementById(id);
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+                element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
             }
         }
     };

@@ -4,11 +4,14 @@ import { useTranslation } from 'react-i18next';
 import Card from '@/shared/Cards/Card';
 import * as styles from '@/pages/Portfolio/ServiceSection.module.scss';
 import CardBorder from '@/shared/Borders/CardBorder';
+import { log, logLevel } from '@/utils/log';
 
 
 const ServiceSection = ({ id }) => {
     const { t } = useTranslation();
     const services = t('cardsData', { returnObjects: true });  // 獲取服務數據
+
+    log(logLevel.DEBUG, 'ServiceSection rendered');
 
     return (
         <div id={id} className={styles.serviceSection}>
