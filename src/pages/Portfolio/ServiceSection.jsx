@@ -1,4 +1,4 @@
-// src/components/ServiceSection/ServiceSection.jsx
+// src/pages/ServiceSection/ServiceSection.jsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import Card from '@/shared/Cards/Card';

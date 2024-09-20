@@ -8,7 +8,7 @@ import ComputerIcon from '@/shared/Icons/ComputerIcon';
 import Border from '@/shared/Borders/Border';
 import Tooltip from '@/shared/Tooltips/Tooltip';
 
-const HeroSection = ({ id }) => {
+const HeroSection = ({ id }) => {   // 接收 id prop
     const { t, i18n } = useTranslation();
 
     log(logLevel.DEBUG, 'Portfolio rendered');
@@ -20,7 +20,10 @@ const HeroSection = ({ id }) => {
     };
 
     return (
-        <div id={id} className={`${styles.heroContainer} ${i18n.language}`} data-lang={i18n.language}>
+        <div id={id}
+            className={`${styles.heroContainer} ${i18n.language}`}
+            data-lang={i18n.language}> {/* 將 id 傳遞到根元素 */}
+
             <div className={styles.heroContent}>
                 <ComputerIcon strokeColor="var(--text-primary)" fillColor="var(--text-primary)" strokeWidth={0.5} />
                 <motion.h1

@@ -1,13 +1,11 @@
 //src/components/navBar/navBar.jsx 
-import React, { useState, useEffect } from 'react'
-import { useTheme } from '@/utils/ThemeContext'
+import React, { useState } from 'react'
 import ThemeButton from '@/components/navBar/ThemeButton';
 import * as styles from '@/components/navBar/Navbar.module.scss';
 import LangButton from '@/components/navBar/LangButton';
 import useScrollSpy from '@/utils/useScrollSpy';
 
 const Navbar = () => {
-    const { isDarkMode } = useTheme();  // 獲取當前主題狀態
     const [isMenuOpen, setIsMenuOpen] = useState(false); // 控制菜單開關
     const [activeLink, setActiveLink] = useState(0); // 控制當前選中的菜單項目
 

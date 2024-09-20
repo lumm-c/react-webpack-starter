@@ -1,4 +1,4 @@
-// src/components/ServiceSection/ServiceSection.module.scss
+// src/pages/Portfolio/ServiceSection.module.scss
 @import '@/styles/variables';
 
 
@@ -31,34 +31,36 @@
     background-color: var(--text-primary); // 用來改變 SVG 顏色
 }
 
+// 手機佈局：單列
 .services {
     display: grid;
-    grid-template-columns: repeat(1, minmax(180px, 1fr));
+    grid-template-columns: repeat(1, minmax(180px, 1fr)); // 單列
     grid-auto-rows: 1fr;
-    gap: 100px;
+    gap: 100px; // 卡片之間的間距
 }
 
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1px) {
+// 平板佈局：多列
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet-minus-1) {
     .services {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // 自動調整列數
         gap: 50px;
     }
 
     .title {
         font-size: var(--heading2);
-        max-width: 30%;
+        max-width: 60%;
     }
 }
 
-// 桌機樣式
+// 桌機佈局：三列
 @media (min-width: $breakpoint-tablet) {
     .services {
-        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        grid-template-columns: repeat(3, minmax(200px, 1fr)); // 三列佈局
         gap: 50px;
     }
 
     .title {
         font-size: var(--heading2);
-        max-width: 30%;
+        max-width: 40%;
     }
 }

@@ -90,16 +90,18 @@
 }
 
 // 平板樣式
-@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet - 1px) {
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet-minus-1) {
     .heroContainer {
-        margin: 1.5rem 9% 1rem;
-        gap: 10vh;
+        flex-direction: row;
+        margin: 1rem 9%;
+        gap: 8vh;
     }
 
     .heroContent {
-        width: 80%;
-        align-items: center;
-        text-align: center;
+        width: 50%;
+        align-items: left;
+        text-align: left;
+        gap: 0vh;
     }
 
     .heroTitle {
@@ -107,13 +109,25 @@
     }
 
     .imageContainer {
-        width: 80%;
+        width: auto;
         text-align: center;
     }
 
     .heroImage {
-        width: 70%;
+        width: 100%;
         height: auto;
+    }
+
+    .highlight {
+        &::after {
+            right: -8vw;
+            top: -40%;
+        }
+
+        [data-lang="zh"] &::after {
+            right: -6vw;
+            top: -50%;
+        }
     }
 }
 
@@ -136,7 +150,6 @@
 
     .heroTitle {
         font-size: var(--heading1);
-
     }
 
     .imageContainer {

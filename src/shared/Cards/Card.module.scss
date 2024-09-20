@@ -1,6 +1,6 @@
 @import '@/styles/variables';
 
-// Mobile First 預設樣式（針對手機）
+// 卡片外層樣式：使用 Flexbox 進行排列,  Mobile First 預設樣式（針對手機）
 .card {
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
     box-sizing: border-box;
     position: relative;
     z-index: 1; // 確保卡片在邊框上顯示
-    min-height: 500px;
+    min-height: 500px; // 卡片最小高度
 
     &:hover {
         transform: scale(1.05);
@@ -30,36 +30,46 @@
     pointer-events: none;
 }
 
+// 卡片內容樣式：使用 Flexbox 垂直排列
 .cardContent {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    height: 100%;
+    flex-direction: column; // 垂直排列內容
+    justify-content: space-between; // 頂部圖標與底部細節之間保持距離
+    align-items: center; // 水平居中
+    text-align: center; // 內容文本居中
+    height: 100%; // 確保內容佔滿卡片高度
     width: 100%;
 }
 
+
+// 卡片圖標樣式
 .cardIcon {
     width: 100px;
     height: 100px;
-    object-fit: contain;
+    object-fit: contain; // 確保圖標大小保持一致
     margin-bottom: 1rem;
 }
 
+// 卡片標題樣式
 .cardTitle {
+    flex-grow: 2; // 標題區佔據2份高度
     font-size: var(--subtitle);
     margin-bottom: 0.5rem;
 }
 
+// 卡片描述樣式
 .cardDescription {
+    flex-grow: 3; // 描述區佔據3份高度
     font-size: var(--body1);
     color: var(--text-primary);
     margin-bottom: 1rem;
 }
 
+// 卡片底部內容：分類與技術細節
 .cardFooter {
     margin-top: 1.5rem;
+    flex-grow: 1; // 底部區佔據1份高度
+    min-height: 156px;
 
     .cardCategory {
         font-weight: bold;
