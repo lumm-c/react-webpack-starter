@@ -45,7 +45,12 @@ const Navbar = () => {
         } else {
             const element = document.getElementById(id);
             if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+                // 手動計算滾動位置，避免被導航欄遮擋
+                const elementPosition = element.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({
+                    top: elementPosition,
+                    behavior: 'smooth',
+                });
             }
         }
     };
