@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '@/components/Logo';
 import { useTranslation } from 'react-i18next';
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 
 const BasicStage = () => {
     // 使用 useTranslation 取得翻譯函數 t
@@ -13,8 +13,8 @@ const BasicStage = () => {
     return (
         <div className={`${i18n.language}`}>
             <Logo />
-            <h1>{t('welcome')}</h1>
-            <p>{t('description')}</p>
+            <h1>{t('basicstage.welcome')}</h1>
+            <p>{t('basicstage.description')}</p>
         </div >
     );
 };

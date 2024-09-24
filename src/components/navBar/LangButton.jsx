@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import i18n from '@/utils/i18n';
 import * as styles from './LangButton.module.scss';
-import { useTheme } from '@/utils/ThemeContext';
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 import loadChineseFont from '@/utils/loadChineseFont';
 
 const LangButton = ({ }) => {

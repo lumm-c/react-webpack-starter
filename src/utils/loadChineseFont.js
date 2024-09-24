@@ -1,5 +1,5 @@
 //src/utils/loadChineseFont.js
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 
 const loadChineseFont = async () => {
     try {

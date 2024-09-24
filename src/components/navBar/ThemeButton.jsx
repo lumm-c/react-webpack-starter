@@ -1,8 +1,7 @@
 import React from 'react';
 import * as styles from './ThemeButton.module.scss';
 import { useTheme } from '@/utils/ThemeContext';
-import { useMemo } from 'react';
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 
 
 const ThemeButton = ({ }) => {

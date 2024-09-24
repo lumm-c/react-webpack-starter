@@ -1,5 +1,5 @@
 import React from 'react';
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 
 const Version = () => {
     const appVersion = process.env.REACT_APP_VERSION;;

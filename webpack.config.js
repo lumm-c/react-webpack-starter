@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require("webpack");
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: path.join(__dirname, 'src/index.js'),
@@ -18,8 +19,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/, // 處理 SASS 文件
-                use: ['style-loader', 'css-loader', , 'sass-loader']
+                test: /\.(sass|css|scss)$/, // 處理 SASS 文件
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif|svg)$/, // 處理圖片文件的規則
@@ -42,6 +43,7 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.REACT_APP_VERSION': JSON.stringify(require("./package.json").version),
         }),
+        new Dotenv(),
     ],
     resolve: {
         alias: {

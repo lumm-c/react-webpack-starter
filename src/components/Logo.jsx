@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './Logo.module.scss';
 import { useTheme } from '@/utils/ThemeContext';
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 
 const Logo = ({ }) => {
     // 使用 require 導入圖片

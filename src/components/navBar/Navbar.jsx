@@ -13,8 +13,8 @@ const Navbar = () => {
     // 定義選單項目
     const menuItems = [
         { name: 'Home', link: '#home' },
-        { name: 'Service', link: '#services' },
-        { name: 'Project', link: '#projects' },
+        { name: 'Services', link: '#services' },
+        { name: 'Projects', link: '#projects' },
         { name: 'Contact', link: '#contact' }
     ];
 
