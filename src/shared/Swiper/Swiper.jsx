@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import PropTypes from 'prop-types';
 import * as styles from './Swiper.module.scss';
+import ReactGA from 'react-ga4';
 
 const Swiper = ({
     items,
@@ -10,10 +11,12 @@ const Swiper = ({
     delay = 3000,
     direction = 'horizontal',
     onSlideChange,
+    onExternalLinkClick
 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const totalItems = items.length;
     const [touchStart, setTouchStart] = useState(null);
+
 
     useEffect(() => {
         let interval;
@@ -94,6 +97,14 @@ const Swiper = ({
                                 <span key={index}>{tech}</span>
                             ))}
                         </div>
+                        <div >
+
+                            {items[currentIndex].live && (
+                                <a href={items[currentIndex].live.url} onClick={() => onExternalLinkClick('Live')} target="_blank">
+                                    <img src={require(`@/assets/${items[currentIndex].live.icon}`)} alt="Live Icon" />
+                                </a>
+                            )}
+                        </div>
                         <div className={styles.pagination}>
                             <button onClick={prevSlide} disabled={!loop && currentIndex === 0}>← </button>
                             <span>{currentIndex + 1} / {totalItems}</span>
@@ -123,6 +134,7 @@ Swiper.propTypes = {
     delay: PropTypes.number,
     direction: PropTypes.oneOf(['horizontal', 'vertical']),
     onSlideChange: PropTypes.func,
+    onExternalLinkClick: PropTypes.func.isRequired,  // 新增的 prop 驗證
 };
 
 export default Swiper;

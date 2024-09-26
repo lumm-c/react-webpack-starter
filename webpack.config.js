@@ -46,6 +46,7 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.REACT_APP_VERSION': JSON.stringify(require("./package.json").version),
             'process.env.REACT_APP_I18N_API_URL': JSON.stringify(process.env.REACT_APP_I18N_API_URL || ''), // 這可以保留
+            'process.env.Google_Analytics_ID': JSON.stringify(process.env.Google_Analytics_ID || ''), // 這可以保留
         }),
     ],
     resolve: {
