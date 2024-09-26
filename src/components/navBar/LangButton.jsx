@@ -1,23 +1,30 @@
+//src/components/navBar/Langbutton 
+
 import React, { useState } from 'react'
-import i18n from '@/utils/i18n';
 import * as styles from './LangButton.module.scss';
-import { useTheme } from '@/utils/ThemeContext';
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 import loadChineseFont from '@/utils/loadChineseFont';
+import { useTranslation } from 'react-i18next';
+
 
 const LangButton = ({ }) => {
-    // 切換語言選項的函數
-
+    const { i18n } = useTranslation();
     const [currentLanguage, setCurrentLanguage] = useState(i18n.language);
 
-
-    const toggleLanguage = () => {
+    // 切換語言選項的函數
+    const toggleLanguage = async () => {
         const newLang = i18n.language === 'en' ? 'zh' : 'en';
         if (newLang === 'zh') {
             loadChineseFont();
         }
-        i18n.changeLanguage(newLang);
-        setCurrentLanguage(newLang);  // 更新語言狀態，觸發重新渲染
+        try {
+            await i18n.changeLanguage(newLang);
+            setCurrentLanguage(newLang);  // 更新語言狀態，觸發重新渲染
+
+            localStorage.setItem('language', newLang);  // 保存語言偏好到 localStorage
+        } catch (err) {
+            log(logLevel.ERROR, `Language switch error: ${err}`);
+        }
     }
 
     log(logLevel.DEBUG, 'LangButton rendered');

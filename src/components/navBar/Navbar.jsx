@@ -4,7 +4,7 @@ import ThemeButton from '@/components/navBar/ThemeButton';
 import * as styles from '@/components/navBar/Navbar.module.scss';
 import LangButton from '@/components/navBar/LangButton';
 import useScrollSpy from '@/utils/useScrollSpy';
-
+import ReactGA from 'react-ga4';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false); // 控制菜單開關
@@ -13,8 +13,8 @@ const Navbar = () => {
     // 定義選單項目
     const menuItems = [
         { name: 'Home', link: '#home' },
-        { name: 'Service', link: '#services' },
-        { name: 'Project', link: '#projects' },
+        { name: 'Services', link: '#services' },
+        { name: 'Projects', link: '#projects' },
         { name: 'Contact', link: '#contact' }
     ];
 
@@ -30,13 +30,18 @@ const Navbar = () => {
     // 定義滾動並設置激活狀態的函數
     const handleMenuClick = (e, index, link) => {
         e.preventDefault();  // 防止默認的錨點行為
-        setActiveLink(index);  // 設定激活的菜單項目
-        handleScroll(link);  // 滾動到對應區塊
+        if (activeLink !== index) {
+            setActiveLink(index);  // 設定激活的菜單項目
+            handleScroll(link);  // 滾動到對應區塊
+
+            const pageName = menuItems[index].name;
+            ReactGA.send({ hitType: 'pageview', page: `/${pageName.toLowerCase()}` });
+        }
+
     };
 
     // 定義滾動函數，實現平滑滾動並解決導航欄遮擋問題
     const handleScroll = (id) => {
-        const element = document.getElementById(id);
         if (id === 'home') {
             window.scrollTo({
                 top: 0,  // 滾動到頁面最上方

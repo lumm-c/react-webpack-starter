@@ -1,0 +1,49 @@
+/* 通用樣式 */
+.projectContainer {
+    align-items: center;
+    margin: 2rem 5%;
+}
+
+.titleSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.title {
+    font-size: var(--heading3);
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 100%;
+}
+
+/* 平板與桌機覆蓋樣式 */
+@media screen and (min-width: 768px) {
+    .projectContainer {
+        margin: 4rem 10%;
+    }
+
+    .title {
+        font-size: var(--heading2);
+        margin-bottom: 25px;
+    }
+}
+
+/* 桌機樣式 */
+@media screen and (min-width: 1024px) {
+    .projectContainer {
+        margin: 4rem 15%;
+    }
+
+    .titleSection {
+        margin-bottom: 40px;
+    }
+
+    .title {
+        font-size: var(--heading1);
+        margin-bottom: 30px;
+    }
+}

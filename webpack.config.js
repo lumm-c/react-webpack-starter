@@ -1,6 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require("webpack");
+const dotenv = require('dotenv');
+
+// 加載 .env 文件
+dotenv.config();
 
 module.exports = {
     entry: path.join(__dirname, 'src/index.js'),
@@ -18,8 +22,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.scss$/, // 處理 SASS 文件
-                use: ['style-loader', 'css-loader', , 'sass-loader']
+                test: /\.(sass|css|scss)$/, // 處理 SASS 文件
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.(png|jpg|gif|svg)$/, // 處理圖片文件的規則
@@ -41,6 +45,8 @@ module.exports = {
         new HtmlWebpackPlugin({ template: './public/index.html' }),
         new webpack.DefinePlugin({
             'process.env.REACT_APP_VERSION': JSON.stringify(require("./package.json").version),
+            'process.env.REACT_APP_I18N_API_URL': JSON.stringify(process.env.REACT_APP_I18N_API_URL || ''), // 這可以保留
+            'process.env.Google_Analytics_ID': JSON.stringify(process.env.Google_Analytics_ID || ''), // 這可以保留
         }),
     ],
     resolve: {

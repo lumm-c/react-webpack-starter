@@ -1,0 +1,155 @@
+@import '@/styles/variables';
+
+/* 通用樣式 */
+.swiperContainer {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid var(--text-primary);
+    background: var(--grey-light);
+    overflow: hidden;
+    box-shadow: 21px 21px 0px rgba(0, 0, 0, 0.1); // 添加輕微陰影，提升視覺效果
+}
+
+.swiperSlide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.swiperImage {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+}
+
+.swiperContent {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 30px;
+    text-align: left;
+    gap: 30px;
+}
+
+.swiperTitle {
+    font-size: var(--heading3);
+    font-weight: bold;
+}
+
+.swiperContent p {
+    font-size: var(--body2);
+}
+
+.hashtags {
+    display: flex; // 使用 Flexbox 使標籤呈現水平排列
+    flex-wrap: wrap; // 如果空間不夠，自動換行
+    gap: 10px; // 增加標籤之間的間距
+    justify-content: flex-start; // 將標籤置中顯示
+    margin-bottom: 20px; // 確保與其他元素有足夠間距
+}
+
+.hashtags span {
+    background-color: var(--grey); // 添加背景色，使 hashtag 顯眼
+    border-radius: 20px; // 添加圓角，讓標籤看起來更美觀
+    padding: 8px 15px; // 增加內邊距，讓標籤內容不會靠邊緣太近
+    font-size: var(--body2); // 調整字體大小
+    color: var(--text-primary); // 設置文字顏色
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1); // 添加輕微陰影，提升視覺效果
+    transition: all 0.3s ease; // 添加過渡效果
+}
+
+.hashtags span:hover {
+    background-color: var(--accent); // 鼠標懸停時改變背景顏色
+    transform: scale(1.05); // 鼠標懸停時稍微放大
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    color: var(--text-primary);
+    font-size: var(--subtitle);
+}
+
+.pagination button {
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    margin: 3px;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: var(--subtitle);
+}
+
+.pagination button:disabled {
+    color: var(--disabled-text);
+    cursor: not-allowed;
+}
+
+/* Vertical 樣式 */
+.vertical .swiperSlide {
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 媒體查詢 */
+@media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet-minus-1) {
+    .swiperContainer {
+        max-width: 1200px;
+    }
+
+    .swiperTitle {
+        font-size: var(--heading2);
+    }
+
+    .swiperImage {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .swiperContent {
+        margin-left: 20px;
+        width: 90%;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .swiperContainer {
+        max-width: 1300px;
+    }
+
+    .swiperSlide {
+        flex-direction: row;
+    }
+
+    .swiperTitle {
+        font-size: var(--heading2);
+    }
+
+    .swiperImage {
+        max-height: 605px;
+    }
+
+    .swiperContent {
+        padding: 0px 100px;
+        width: 50%;
+    }
+
+    .swiperContent p {
+        font-size: var(--body1);
+        line-height: 24px;
+    }
+}

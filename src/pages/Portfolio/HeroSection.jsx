@@ -1,6 +1,6 @@
 import React from 'react';
 import { Trans, useTranslation } from 'react-i18next';
-import { log, logLevel } from '@/utils/log';
+import { log } from '@/utils/log';
 import Button from '@/shared/Buttons/Button';
 import * as styles from '@/pages/Portfolio/HeroSection.module.scss'; // 使用模塊化的樣式
 import { motion } from 'framer-motion'; // 引入 Framer Motion
