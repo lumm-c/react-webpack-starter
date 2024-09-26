@@ -10,7 +10,7 @@ let instance = null;
 
 const createI18nInstance = () => {
     if (!instance) {
-        console.log("createI18nInstance");
+        log(logLevel.DEBUG, `createI18nInstance`);
 
         // 支援的語言
         const supportedLanguages = ['en', 'zh'];

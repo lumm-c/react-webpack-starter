@@ -1,7 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require("webpack");
-const Dotenv = require('dotenv-webpack');
+const dotenv = require('dotenv');
+
+// 加載 .env 文件
+dotenv.config();
 
 module.exports = {
     entry: path.join(__dirname, 'src/index.js'),
@@ -42,8 +45,8 @@ module.exports = {
         new HtmlWebpackPlugin({ template: './public/index.html' }),
         new webpack.DefinePlugin({
             'process.env.REACT_APP_VERSION': JSON.stringify(require("./package.json").version),
+            'process.env.REACT_APP_I18N_API_URL': JSON.stringify(process.env.REACT_APP_I18N_API_URL || ''), // 這可以保留
         }),
-        new Dotenv(),
     ],
     resolve: {
         alias: {

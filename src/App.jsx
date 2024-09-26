@@ -6,7 +6,6 @@ import Layout from '@/components/Layout';
 import Portfolio from '@/pages/Portfolio/Portfolio';
 
 const App = () => {
-
     return (
         <Routes>
             <Route path="/" element={<Layout />}>
