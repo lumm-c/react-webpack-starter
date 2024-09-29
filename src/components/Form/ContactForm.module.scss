@@ -1,0 +1,110 @@
+// src/components/ContactForm.module.scss
+@import '@/styles/variables';
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; // 表單欄位間的間距
+    padding: 1.5rem;
+
+    .formGroup {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary); // 標籤字體顏色
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 0.75rem;
+            border: none;
+            background-color: var(--grey-light);
+            border-bottom: 2px solid var(--text-secondary);
+            font-size: 1rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--text-primary);
+        }
+
+        .errorText {
+            color: #ff4d4f; // 錯誤訊息顏色
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+    }
+
+    .submitButton {
+        padding: 10px;
+        background-color: var(--primary);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-primary);
+        max-height: 64px;
+        max-width: 165px;
+        font-size: var(--subtitle);
+        font-weight: bold;
+
+        &:hover {
+            background-color: #e094b8; // 按鈕滑過時的顏色
+        }
+
+        &:active {
+            background-color: #d083a2; // 按鈕點擊時的顏色
+        }
+    }
+
+    .submitIcon {
+        margin-left: 5px;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+// 平板螢幕樣式
+@media (min-width: 768px) {
+    .contactForm {
+        max-width: 600px; // 限制表單最大寬度
+        margin: 0 auto; // 置中表單
+
+        .formGroup {
+            label {
+                font-size: 1.125rem; // 提升標籤字體大小
+                text-align: left;
+            }
+
+            input,
+            select,
+            textarea {
+                border: none;
+                font-size: 1.125rem; // 提升輸入框字體大小
+                border-bottom: 2px solid var(--text-secondary);
+            }
+        }
+
+        .submitButton {
+            font-size: 1.125rem; // 提升按鈕字體大小
+        }
+    }
+}
+
+// 桌機樣式
+@media (min-width: 1024px) {
+    .contactForm {
+        max-width: 800px; // 桌機寬度下的最大寬度
+        width: 100%;
+    }
+}

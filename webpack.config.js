@@ -47,6 +47,10 @@ module.exports = {
             'process.env.REACT_APP_VERSION': JSON.stringify(require("./package.json").version),
             'process.env.REACT_APP_I18N_API_URL': JSON.stringify(process.env.REACT_APP_I18N_API_URL || ''), // 這可以保留
             'process.env.Google_Analytics_ID': JSON.stringify(process.env.Google_Analytics_ID || ''), // 這可以保留
+            'process.env.EMAILJS_PUBLIC_KEY': JSON.stringify(process.env.EMAILJS_PUBLIC_KEY),
+            'process.env.EMAILJS_SERVICE_ID': JSON.stringify(process.env.EMAILJS_SERVICE_ID),
+            'process.env.EMAILJS_TEMPLATE_ID': JSON.stringify(process.env.EMAILJS_TEMPLATE_ID),
+            'process.env.REACT_APP_SECRET_KEY': JSON.stringify(process.env.REACT_APP_SECRET_KEY)
         }),
     ],
     resolve: {
