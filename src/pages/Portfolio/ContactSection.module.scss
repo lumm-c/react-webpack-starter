@@ -1,0 +1,102 @@
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: var(--grey-light);
+    border: 4px solid var(--text-primary);
+    box-shadow: 21px 21px 0px rgba(0, 0, 0, 0.1); // 添加輕微陰影，提升視覺效果
+    margin: 2rem 5%;
+    padding: 10px 10px;
+}
+
+.infoSection {
+    max-width: 100%;
+}
+
+.title {
+    font-size: var(--heading3);
+    font-weight: 900;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+.description {
+    font-size: var(--body2);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    text-align: left;
+}
+
+.infoBox {
+    border-radius: 12px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 12px;
+    gap: 50px;
+
+}
+
+.infoItem:hover {
+    background-color: #f3f3f3;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 13px;
+}
+
+.infoTitle {
+    font-size: var(--subtitle);
+    color: var(--text-primary);
+    text-align: left;
+}
+
+/* 平板與桌機覆蓋樣式 */
+@media screen and (min-width: 768px) {
+    .subcontainer {
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 800px;
+        margin: 4rem 10%;
+        padding: 25px 25px;
+    }
+
+    .infoSection {
+        max-width: 45%;
+    }
+
+    .title {
+        font-size: var(--heading2);
+        color: var(--text-primary);
+        text-align: left;
+    }
+
+    .description {
+        font-size: var(--body1);
+    }
+
+}
+
+/* 桌機樣式 */
+@media screen and (min-width: 1024px) {
+    .subcontainer {
+        max-width: 1200px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4rem 15%;
+        padding: 50px 50px;
+        gap: 80px;
+    }
+
+    .infoSection {
+        max-width: 45%;
+    }
+}

@@ -3,8 +3,6 @@
 /* 通用樣式 */
 .swiperContainer {
     position: relative;
-    width: 100%;
-    max-width: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -36,10 +34,9 @@
     display: flex;
     width: 80%;
     flex-direction: column;
-    align-items: left;
     margin-top: 30px;
     text-align: left;
-    gap: 30px;
+    gap: 20px;
 }
 
 .swiperTitle {
@@ -108,6 +105,7 @@
 /* 媒體查詢 */
 @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet-minus-1) {
     .swiperContainer {
+        width: 100%;
         max-width: 1200px;
     }
 
@@ -128,6 +126,7 @@
 
 @media (min-width: $breakpoint-tablet) {
     .swiperContainer {
+        width: 100%;
         max-width: 1300px;
     }
 
